@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Phone, MapPin, Mail, Clock, Send } from 'lucide-react';
-import { BUSINESS_INFO } from '../constants';
+import { BUSINESS_INFO } from '../constants.tsx';
 
 const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {

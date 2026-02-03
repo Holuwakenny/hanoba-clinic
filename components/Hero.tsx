@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { IMAGES, BUSINESS_INFO } from '../constants';
+import { IMAGES, BUSINESS_INFO } from '../constants.tsx';
 
 const Hero: React.FC = () => {
   return (

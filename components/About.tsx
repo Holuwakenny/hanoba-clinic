@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { IMAGES, BUSINESS_INFO } from '../constants';
+import { IMAGES, BUSINESS_INFO } from '../constants.tsx';
 import { CheckCircle2 } from 'lucide-react';
 
 const About: React.FC = () => {

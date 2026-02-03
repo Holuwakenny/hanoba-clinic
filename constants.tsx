@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Activity, Heart, ShieldAlert, Baby, Clock, Microscope } from 'lucide-react';
-import { Service, NavItem } from './types';
+import { Service, NavItem } from './types.ts';
 
 export const BUSINESS_INFO = {
   name: "Hanoba Medical Centre",

@@ -1,10 +1,10 @@
 
 import React from 'react';
-import Layout from './components/Layout';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Contact from './components/Contact';
+import Layout from './components/Layout.tsx';
+import Hero from './components/Hero.tsx';
+import Services from './components/Services.tsx';
+import About from './components/About.tsx';
+import Contact from './components/Contact.tsx';
 
 const App: React.FC = () => {
   return (
@@ -28,7 +28,6 @@ const App: React.FC = () => {
         </div>
       </div>
       <Contact />
-      {/* Google Maps Embed Section */}
       <section className="h-[450px] w-full bg-gray-100 relative">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6738520295147!2d3.4233553!3d6.4638489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b238ae611a3%3A0x1a450f5e10941415!2sHanoba%20Medical%20Centre!5e0!3m2!1sen!2sng!4v1714800000000!5m2!1sen!2sng" 

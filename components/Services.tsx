@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SERVICES } from '../constants';
+import { SERVICES } from '../constants.tsx';
 import { ArrowRight } from 'lucide-react';
 
 const Services: React.FC = () => {

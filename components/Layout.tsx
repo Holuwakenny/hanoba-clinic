@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, MapPin, Clock } from 'lucide-react';
-import { BUSINESS_INFO, NAV_ITEMS } from '../constants';
+import { BUSINESS_INFO, NAV_ITEMS } from '../constants.tsx';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -19,7 +19,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Use a proper scroll handler for smooth navigation
   const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#')) {
       e.preventDefault();
@@ -28,7 +27,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
         setIsMenuOpen(false);
-        // Update URL hash without jumping
         window.history.pushState(null, '', href);
       }
     }
@@ -36,7 +34,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2 px-4 text-sm hidden md:block">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex gap-6">
@@ -47,7 +44,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </div>
 
-      {/* Header */}
       <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-white py-5'}`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
           <a 
@@ -64,7 +60,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
           </a>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex gap-8 items-center">
             {NAV_ITEMS.map((item) => (
               <a
@@ -85,13 +80,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </a>
           </nav>
 
-          {/* Mobile Toggle */}
           <button className="md:hidden text-gray-700" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
-        {/* Mobile Nav Overlay */}
         {isMenuOpen && (
           <div className="md:hidden fixed inset-0 top-[60px] bg-white z-[100] py-6 px-4 flex flex-col gap-4 animate-in fade-in slide-in-from-top duration-300">
             {NAV_ITEMS.map((item) => (
@@ -117,7 +110,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       <main>{children}</main>
 
-      {/* Footer */}
       <footer className="bg-blue-950 text-white pt-16 pb-8">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-blue-900 pb-12 mb-8">
           <div className="space-y-4">

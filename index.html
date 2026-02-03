@@ -18,7 +18,6 @@
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
       }
-      /* Ensure smooth scrolling for the whole page */
       html {
         scroll-behavior: smooth;
       }
@@ -31,12 +30,14 @@
         "react-dom": "https://esm.sh/react-dom@18.3.1",
         "react-dom/": "https://esm.sh/react-dom@18.3.1/",
         "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
-        "lucide-react": "https://esm.sh/lucide-react@0.428.0?external=react,react-dom"
+        "lucide-react": "https://esm.sh/lucide-react@0.428.0?deps=react@18.3.1,react-dom@18.3.1"
       }
     }
     </script>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Load the application entry point -->
+    <script type="module" src="index.tsx"></script>
   </body>
 </html>
