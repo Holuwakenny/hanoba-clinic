@@ -1,0 +1,7 @@
+{
+  "name": "Hanoba Medical Centre",
+  "description": "A modern healthcare facility in Ikoyi, Lagos, providing 24/7 medical services including general practice, pediatrics, and emergency care.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
